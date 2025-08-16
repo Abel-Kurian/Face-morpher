@@ -82,7 +82,7 @@ st.markdown("</div>", unsafe_allow_html=True)
 if img is not None:
     # Find all reference images in folder
     import random
-    ref_folder = "D:/code/Useless_project2.0/p2/"
+    ref_folder = "./"
     ref_imgs = sorted(glob.glob(os.path.join(ref_folder, '*.jpg')) + glob.glob(os.path.join(ref_folder, '*.png')))
     if not ref_imgs:
         st.error(f"No reference images found in {ref_folder}")
@@ -165,3 +165,4 @@ if img is not None:
                 overlay_size = (160, 120)
                 crop_img = themed_img[0:overlay_size[1], 0:overlay_size[0]]
             st.image(cv2.cvtColor(crop_img, cv2.COLOR_BGR2RGB))
+
